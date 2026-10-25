@@ -6,7 +6,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 <!-- ⬆código de um estilo de fontes, do google fontes!-->
 
-    <meta charset="utf-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+<link rel="icon" href="favicon.png" type="image/png">
+
+       <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cadastro de Livros</title>
     <link rel="icon" type="image/png" href="livro.png">
@@ -34,7 +40,7 @@
             background-color: white;
             padding: 20px;
             border-radius: 20px;
-            width: 400px;
+            width: 50%;
             margin: 0 auto 40px auto;
             box-shadow: 10px 10px 10px lightgray;
         }
@@ -131,10 +137,10 @@
 <body>
 
     <div id="menu">
-        <a href="index.html">Página Inicial |
- </a>
-        <a href="Inova_Study.html">Inova_Study</a> |
-        Cadastro
+        <a href="index.html">Página Inicial</a> |
+     Cadastro |
+        <a href="Inova_Study.html">Inova Study</a> 
+       
     </div>
 
     <h1 class="lobster-two-regular">Formulário de Cadastro</h1>
@@ -172,8 +178,8 @@
             <label for="senha">Senha:</label>
             <input type="password" name="senha" id="senha" minlength="6" maxlength="12">
 
-            <label for="message">Mensagem:</label>
-            <textarea id="message" name="message" placeholder="digite aqui sua mensagem"></textarea>
+            <label for="message">Complemento:</label>
+            <textarea id="message" name="message" placeholder="Digite aqui os complementos"></textarea>
         </fieldset>
 
         <button type="submit" onclick="alert('Seu cadastro foi realizado com sucesso!')">
@@ -183,4 +189,3 @@
 
 </body>
 </html>
-
