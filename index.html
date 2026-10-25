@@ -17,16 +17,24 @@
 
 		.lobster-two-regular {
             text-align: center;
-            color: mediumpurple;
+            color: rgb(91, 59, 156);
             font-size: 60px;
             font-family: "Lobster Two", sans-serif;
             font-weight: 400;
             font-style: normal;
+			text-shadow: 5px 5px 10px gray;
+			transition: transform 0.3s ease-in-out, color 0.4s ease-out;
 
         }
 
+		.lobster-two-regular:hover {
+			transform: rotateX(360deg);
+			color: rgb(238, 1, 247);
+		}
+
+
 		#menu  {
-		
+			position: fixed;
 		 	top: 0px;
 		 	left: 0px;
 		 	width: 100%;
@@ -39,45 +47,117 @@
         	word-spacing: 15px;
         	
 		}
+
 		#menu a {
 			color: white;
 		}
+
 		h2 {
-			color: #4361ee;
+			color: #1b2969;
 			text-align: center;
 			font-family: gabriola;
+			font-size: 45px;
 		}
+
+        
 		mark {
-			background-color: #c6ddf3;
+			background-color: #cb77fc;
 		}
+
 		body {
-			background-color: #d0f4de;
+			background: linear-gradient(to right, rgb(133, 124, 255), rgb(124, 236, 193), aliceblue);
 		}
+
 		th {
 			background-color:#90caf9 ;
 		}
+
 		button {
 			justify-content: center;
 			background-color: lawngreen;
+			cursor: pointer;
 		}
-			
 
-			</style>
+		p {
+			text-align: center;
+			text-decoration-line: overline underline;
+		}
+
+
+		details summary {
+			list-style: none;
+			cursor: pointer;
+			font-size: 22px;
+		}
+
+		details summary::before {
+			content: "";
+			display: inline-block;
+			width: 16px;
+			height: 16px;
+			margin-right: 10px;
+			vertical-align: middle;
+
+			background-image: url('tag.png');
+			background-size: contain;
+		} 
+
+		 .container {
+            display: flex;
+			flex-direction: row;
+
+			gap: 20px;
+			padding: 20px;
+            flex-wrap: wrap;
+
+            /*height: 200px;*/
+
+			justify-content: space-between;
+        }
+
+       .item {
+			width: 200px;
+			/*height: auto;*/
+			max-width: 100%;
+			flex-basis: 200px;
+			flex-grow: 1;
+
+        } 
+
+
+        .container img {
+            width: 100%;
+            height: 200px;
+			object-fit: cover;
+        }
+
+        .container img:hover {
+            border: 2px dotted rgb(83, 0, 65);
+        }
+
+	
+			
+	</style>
 		
 	
 <body>
+
 	<div id="menu">
 
 		Página Inicial |
 		<a href="cadastro.html">Cadastro</a> |
 		<a href="Inova_Study.html">Inova_Study</a> |
 	</div>
+
 	<br><br>
 	<h1 class="lobster-two-regular"> 🛍 INOVABOX</h1> 
-<a href="#proposta"> Proposta da loja</a> |
-<a href="#produtos"> Nossos produtos </a> |
-<a href="#promocoes"> Promoçôes da semana</a> |
-<a href="#precos"> Preços gerais </a> 
+
+	<h3 align="center">
+		<a href="#proposta"> Proposta da loja</a>   |
+		<a href="#produtos"> Nossos produtos </a>   |
+		<a href="#promocoes"> Promoções da semana</a>   |
+		<a href="#precos"> Preços gerais </a> 
+	</h3>
 
 
 	<p><h2 id="proposta">Proposta da loja</h2>
@@ -85,90 +165,112 @@ A <mark>InovaBox</mark> é uma loja fictícia que<mark> vende produtos criativos
 
 <h2 id="produtos"> Nossos produtos:</h2>
 
-<table border="2px" cellpadding="10" cellspacing="0" align="center"> 
+<details> 
+    <summary>Mochila Solar</summary> 
+    <ul>
+    <li>Possui uma pequena placa solar que ajuda a carregar o celular</li> 
+    <li>Problema Resolvido: Falta de bateria durante o dia.</li>
+    </ul>
+</details>
+
+<details>
+    <summary>Garrafa Lembrete</summary> 
+    <ul>
+    <li>Acende uma luz quando está na hora de beber água.</li> 
+    <li>Problema Resolvido: Esquecer de se hidratar.</li> 
+    </ul>
+</details>
+
+<details>
+    <summary>Caderno Inteligente</summary>
+    <ul>
+    <li>Tem páginas reutilizáveis que podem ser apagadas e reorganizadas.</li> 
+    <li>Problema Resolvido: Gastar muitos cadernos e folhas.</li> 
+    </ul> 
+</details>  
+  
+ <details>
+    <summary>Lixeira Separadora</summary>
+     <ul>
+    <li>Possui divisórias ajustáveis e avisa quando algum material está faltando.</li> 
+    <li>Problema Resolvido: Dificuldade na separação de resíduos.</li>
+    </ul> 
+</details>
+  
+<details>
+    <summary>Estojo Organizador</summary> 
+    <ul>
+     <li>Possui divisórias ajustáveis e avisa quando algum material está faltando.</li> 
+    <li>Problema Resolvido: Perder lápis, canetas e borrachas.</li>
+    </ul>
+</details> 
  
-  <tr>
-	    <th>Produtos</th>
-	     <th>Como funciona</th>
-	     <th>Problema que resolve</th>
-   </tr>
-  <tr> 
-    <td>Mochila Solar</td> 
-    <td>Possui uma pequena placa solar que ajuda a carregar o celular</td> 
-    <td>Falta de bateria durante o dia.</td>
-  </tr> 
-
-  <tr> 
-    <td>Garrafa Lembrete</td> 
-    <td>Acende uma luz quando está na hora de beber água.</td> 
-    <td>Esquecer de se hidratar.</td> 
-  </tr> 
-
-  <tr> 
-    <td>Caderno Inteligente</td> 
-    <td>Tem páginas reutilizáveis que podem ser apagadas e reorganizadas.</td> 
-    <td>Gastar muitos cadernos e folhas.</td> 
-  </tr> 
   
-  <tr> 
-    <td>Lixeira Separadora</td> 
-    <td>Possui divisórias ajustáveis e avisa quando algum material está faltando.</td> 
-    <td>Dificuldade na separação de resíduos.</td> 
-  </tr> 
+<details>
+    <summary>Guarda-Chuva Mochila</summary>
+    <ul> 
+    <li>Pode ser dobrado e guardado em um compartimento da própria mochila.</li> 
+    <li>Problema Resolvido: Carregar um guarda-chuva separado.</li> 
+    </ul>
+</details>
+ 
+<details>
+    <summary>Luminária de Foco</summary>
+<ul>
+  	<li>Muda a intensidade da luz e possui um temporizador para estudos.</li>
+  	<li>Problema Resolvido: Falta de concentração e organização.</li>
+</ul>
+</details>
+
   
-  <tr> 
-    <td>Estojo Organizador</td> 
-    <td>Possui divisórias ajustáveis e avisa quando algum material está faltando.</td> 
-    <td>Perder lápis, canetas e borrachas.</td> 
-  </tr> 
-  
-  <tr> 
-    <td>Guarda-Chuva Mochila</td> 
-    <td>Pode ser dobrado e guardado em um compartimento da própria mochila.</td> 
-    <td>Carregar um guarda-chuva separado.</td> 
-  </tr>
-  <tr>
-  	<td>Luminária de Foco</td>
-  	<td>Muda a intensidade da luz e possui um temporizador para estudos.</td>
-  	<td>Falta de concentração e organização.</td>
-  </tr> 
-  
-  <tr>
-  	<td>Tênis Refletivo</td>
-  	<td>Possui detalhes que brilham no escuro para aumentar a visibilidade.</td>
-  	<td>Falta de segurança ao caminhar à noite.</td>
-  </tr> 
+<details>
+    <summary>Tênis Refletivo</summary>
+<ul>
+  	<li>Possui detalhes que brilham no escuro para aumentar a visibilidade.</li>
+  	<li>Problema Resolvido: Falta de segurança ao caminhar à noite.</li>
+</ul>
+</details>
+ 
 
-  <tr>
-  	<td>Pote Fresquinho</td>
-  	<td>Mostra a temperatura interna e avisa quando o alimento pode estragar.</td>
-  	<td>Desperdício de comida.</td>
-  </tr> 
+<details>
+    <summary>Pote Fresquinho</summary>
+    <ul>
+  	<li>Mostra a temperatura interna e avisa quando o alimento pode estragar.</li>
+  	<li>Problema Resolvido: Desperdício de comida.</li>
+    </ul>
+</details>
 
-  <tr>
-  	<td>Chaveiro Localizador</td>
-  	<td>Emite um som quando o usuário ativa o localizador pelo celular.</td>
-  	<td>Perder chaves, estojo ou mochila.</td>
-  </tr> 
 
-  <tr>
-  	<td>Capa de Chuva para Bicicleta</td>
-  	<td>Protege o ciclista e pode ser dobrada em uma pequena bolsa.</td>
-  	<td>Pedalar em dias de chuva.</td>
-  </tr> 
+ <details>
+  	<summary>Chaveiro Localizador</summary>
+  	<ul>
+    <li>Emite um som quando o usuário ativa o localizador pelo celular.</li>
+  	<li>Problema Resolvido: Perder chaves, estojo ou mochila.</li>
+    </ul>
+</details>
 
-  <tr>
-  	<td>Planta Companheira</td>
-  	<td>Possui um sensor que avisa quando precisa de água ou luz.</td>
-  	<td>Esquecer de cuidar das plantas.</td>
-  </tr> 
-</table>
+<details>
+  	<summary>Capa de Chuva para Bicicleta</summary>
+    <ul>
+  	<li>Protege o ciclista e pode ser dobrada em uma pequena bolsa.</li>
+  	<li>Problema Resolvido: Pedalar em dias de chuva.</li>
+    </ul>
+ </details>
+
+<details>
+  	<summary>Planta Companheira</summary>
+    <ul>
+  	<li>Possui um sensor que avisa quando precisa de água ou luz.</li>
+  	<li>Problema Resolvido: Esquecer de cuidar das plantas.</li>
+    </ul>
+</details>
+ 
 
 
 <hr>
 <h2 id="promocoes">Promoções da semana </h2>
 
-<table border="2px" cellpadding="10" cellspacing="0" align="center">
+<table border="2px" cellpadding="10" cellspacing="0" align="center" width="100%">
 	<tr>
 	<td>
 		<img src="Estojo_organizador.png"  alt="Estojo Organizador" width="300">
@@ -207,84 +309,77 @@ A <mark>InovaBox</mark> é uma loja fictícia que<mark> vende produtos criativos
 
 </tr>
 </table>
+
 <hr>
 <h2 id="precos">Preços gerais</h2>
 
-<table  border="2px" cellpadding="10" cellspacing="0" align="center">
+<div class="container">
+
+	<div class="item"> 	
 	
-	<tr>
-		<td>
-			<img src="Caderno_inteligente.png" width="300"></td>
-				<td>Caderno inteligente: <br> 109,99</td>
-			</tr>
+		<img src="Caderno_inteligente.png" width="300">
+			<p>Caderno inteligente: 109,99</p>
+	</div>
+			
 
-				<tr>
-					<td>
-						<img src="Capa_chuva.png" width="300"></td>
-						<td>Capa de chuva:  <br> 129,90</td>
-				</tr>
+	<div class="item"> 		
+		<img src="Capa_chuva.png" width="300">
+			<p>Capa de chuva: 129,90</p>
+	</div> 
+		
+	<div class="item"> 
+		<img src="Chaveiro_loc.png" width="300">
+			<p>Chaveiro localizador: 159,99</p>
+	</div>
+		
 
-					<tr>
-					<td>
-						<img src="Chaveiro_loc.png" width="300"></td>
-						<td>Chaveiro localizador: <br> 159,99</td>
-				</tr>
-
-					<tr>
-					<td>
-						<img src="Estojo_organizador.png" width="300"></td>
-						<td>Estojo organizador: <br> 209,99</td>
-				</tr>
-
-					<tr>
-					<td>
-						<img src="Garrafa_lembrete.png" width="300"></td>
-						<td>Garrafa lembrete: <br> 119,99</td>
-				</tr>
-
-					<tr>
-					<td>
-						<img src="Guarda_chuva.png" width="300"></td>
-						<td>Guarda_chuva:<br> 99,90</td>
-				</tr>
-
-					<tr>
-					<td>
-						<img src="Lixeira_separadora.png" width="300"></td>
-						<td>Lixeira separadora:<br> 119,99</td>
-				</tr>
-
-					<tr>
-					<td>
-						<img src="Luminária_foco.png" width="300"></td>
-						<td>Luminária de foco: <br> 109,90</td>
-
-				</tr>
-					<tr>
-					<td>
-						<img src="Mochila_Solar.png" width="300"></td>
-						<td>Mochila solar: <br> 209,99</td>
-				</tr>
-
-					<tr>
-					<td>
-						<img src="Planta_amiga.png" width="300"></td>
-						<td>Planta amiga: <br> 210,99</td>
-				</tr>
-
-					<tr>
-					<td>
-						<img src="Pote_temp.png" width="300"></td>
-						<td>Pote Fresquinho: <br> 91,90</td>
-				</tr>
-
-					<tr>
-					<td>
-						<img src="Tênis_reflex.png" width="300"></td>
-						<td>Tênis reflexivo: <br> 309,99</td>
-				</tr>
+	<div class="item"> 
+		<img src="Estojo_organizador.png" width="300">
+			<p>Estojo organizador: 209,99</p>
+	</div>
+		
+	<div class="item"> 
+		<img src="Garrafa_lembrete.png" width="300">
+			<p>Garrafa lembrete: 119,99</p>
+	</div>
+			
+	<div class="item"> 
+		<img src="Guarda_chuva.png" width="300">
+			<p>Guarda chuva:  99,90</p>
+	</div>
 				
-</table>
+	<div class="item"> 
+		<img src="Lixeira_separadora.png" width="300">
+			<p>Lixeira separadora: 119,99</p>
+	</div>	
+
+	<div class="item"> 
+		<img src="Luminária_foco.png" width="300">
+			<p>Luminária de foco: 109,90</p>
+	</div>
+
+	<div class="item"> 
+		<img src="Mochila_Solar.png" width="300">
+			<p>Mochila solar: 209,99</p>
+	</div>
+			
+	<div class="item"> 
+		<img src="Planta_amiga.png" width="300">
+			<p>Planta amiga: 210,99</p>
+	</div>
+
+	<div class="item"> 
+		<img src="Pote_temp.png" width="300">
+			<p>Pote Fresquinho: 91,90</p>
+	</div>
+				
+	<div class="item"> 
+		<img src="Tênis_reflex.png" width="300">
+			<p>Tênis reflexivo: 309,99</p> 
+	</div>
+
+</div>
+		
 
 
 
