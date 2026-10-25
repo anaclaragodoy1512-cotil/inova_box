@@ -105,14 +105,13 @@
 		 .container {
             display: flex;
 			flex-direction: row;
-
 			gap: 20px;
 			padding: 20px;
             flex-wrap: wrap;
-
             /*height: 200px;*/
-
-			justify-content: space-between;
+			justify-content: center;
+			display: flex;
+			
         }
 
        .item {
@@ -120,7 +119,8 @@
 			/*height: auto;*/
 			max-width: 100%;
 			flex-basis: 200px;
-			flex-grow: 1;
+			flex-grow: 0;
+		  
 
         } 
 
@@ -131,6 +131,7 @@
             width: 100%;
             height: 200px;
 			object-fit: cover;
+			
         }
 
         .container img:hover {
@@ -275,7 +276,7 @@ A <mark>InovaBox</mark> é uma loja fictícia que<mark> vende produtos criativos
 <table border="2px" cellpadding="10" cellspacing="0" align="center" width="100%">
 	<tr>
 	<td>
-		<img src="Estojo_organizador.png"  alt="Estojo Organizador" width="100%">
+		<img src="Estojo_organizador.png"  alt="Estojo Organizador" width="100%" max-width="120px">
 	</td>
 
 	<td style="text-align: center;">Estojo Organizador por apenas:<br>----------<mark>69,99 R$</mark>---------
@@ -287,7 +288,7 @@ A <mark>InovaBox</mark> é uma loja fictícia que<mark> vende produtos criativos
 </tr>
 
 	<td>
-		<img src="Chaveiro_loc.png"  alt="Chaveiro_loc" width="100%">
+		<img src="Chaveiro_loc.png"  alt="Chaveiro_loc" width="100%" max-width="120px">
 	</td>
 
 	<td style="text-align: center;">Chaveiro Localizador por apenas:<br>----------<mark>89,99 R$</mark>---------
@@ -299,7 +300,7 @@ A <mark>InovaBox</mark> é uma loja fictícia que<mark> vende produtos criativos
 
 <tr>
 <td>
-		<img src="Planta_amiga.png"  alt="Planta_amiga" width="100%">
+		<img src="Planta_amiga.png"  alt="Planta_amiga" width="100%" max-width="120px">
 	</td>
 
 	<td style="text-align: center;">Planta Companheira por apenas:<br>----------<mark>75,99 R$</mark>---------
